@@ -20,7 +20,7 @@ for GitHub Action, 用来做提交后代码检查
 注意：
 1. git push 只处理非main master分支，main和master分支处理pull request
 2. 不检查CSS，组内默认使用less
-3. 会检查 markdown
+3. 会检查 Markdown
 
 
 
