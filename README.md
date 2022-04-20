@@ -4,11 +4,11 @@
 2. Husky + Lint Staged
 3. commitlint
 
-## Super Linter
+## 1. Super Linter
 
 [![GitHub Super-Linter](https://github.com/hzz780/super-linter-demo/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-### [Super-linter Lint Docs](https://github.com/github/super-linter)
+### [Super-linter Docs](https://github.com/github/super-linter)
 
 for GitHub Action, 用来做提交后代码检查
 
@@ -19,16 +19,18 @@ for GitHub Action, 用来做提交后代码检查
 2. 在github仓库的 Settings-Secrets-Actions，点击 New repository secret 添加的 GITHUB_TOKEN
    1. GITHUB_TOKEN 生成 [Personal access tokens](https://github.com/settings/tokens)
    2. 添加Actions secrets 的地方 ``https://github.com/[name]/[repo]/settings/secrets/actions``
-3. 确认自己有配置.eslint.json的配置。 linter.yml的 env的参数 TYPESCRIPT_ES_CONFIG_FILE 需要引用这个参数
+3. 确认自己有配置.eslint.json 的配置。 linter.yml的 env的参数 TYPESCRIPT_ES_CONFIG_FILE 需要引用这个参数
 4. 在README中添加
    1. ``[![GitHub Super-Linter](https://github.com/[name]/[repo]/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)``
 
 注意：
-1. git push 只处理非main master分支，main和master分支处理pull request
+1. 默认 git push 只处理非main master分支，main和master分支处理pull request, 可以再 linter.yml中修改
 2. 组内默认使用less [22.04.20 目前stylelint暂时不支持less 和 prettier，等PR反馈]
 3. 默认会检查 Markdown
 
-## Husky + Lint Staged
+更多配置可以看linter.yml
+
+## 2. Husky + Lint Staged
 
 如果遇到问题，请直接查阅官方文档 [lint-staged](https://www.npmjs.com/package/lint-staged)
 
@@ -46,7 +48,7 @@ for GitHub Action, 用来做提交后代码检查
 注意：
 Node.js 我们团队node版本使用的是 12、14、16，一直在更新
 
-## commitlint
+## 3. commitlint
 
 如果有问题，请查看最新的 [commitlint](https://commitlint.js.org/#/guides-local-setup)
 
