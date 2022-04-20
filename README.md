@@ -50,6 +50,8 @@ Node.js 我们团队node版本使用的是 12、14、16，一直在更新
 
 如果有问题，请查看最新的 [commitlint](https://commitlint.js.org/#/guides-local-setup)
 
+推荐使用 [git-cz](https://www.npmjs.com/package/git-cz) 提交代码以确保提交格式正常
+
 0. 确认已经配置了husky
 1. ```yarn add -D @commitlint/{cli,config-conventional}```
 2. ```echo "module.exports = { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js```
