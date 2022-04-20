@@ -2,7 +2,7 @@
 
 1. Super Linter
 2. Husky + Lint Staged
-3. Commit Msg Check
+3. commitlint
 
 ## Super Linter
 
@@ -30,8 +30,10 @@ for GitHub Action, 用来做提交后代码检查
 
 ## Husky + Lint Staged
 
-1. 首先先确认已经按最新的要求配置了 eslint 和 stylelint
-2. npx mrm@2 lint-staged
+如果遇到问题，请直接查阅官方文档 [lint-staged](https://www.npmjs.com/package/lint-staged)
+
+1. 首先先确认已经按最新的要求配置了 ESLint 和 stylelint
+2. npx mrm@2 lint-staged # 会自动配置好husky和lint-staged
 ```json
   {
     "lint-staged": {
@@ -42,13 +44,15 @@ for GitHub Action, 用来做提交后代码检查
 ```
 
 注意：
-node 我们团队node版本使用的是 12、14、16，一直在更新
+Node.js 我们团队node版本使用的是 12、14、16，一直在更新
 
-## Commit Msg Check
+## commitlint
 
-0. Copy scripts/verify-commit-msg.js, 记得配一下.eslintignore
+如果有问题，请查看最新的 [commitlint](https://commitlint.js.org/#/guides-local-setup)
+
+0. 确认已经配置了husky
 1. ```yarn add -D @commitlint/{cli,config-conventional}```
 2. ```echo "module.exports = { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js```
 3. ```yarn husky add .husky/commit-msg 'yarn commitlint --edit $1'```
-4. 确认已经配置了husky
+
 
