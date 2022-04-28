@@ -25,10 +25,22 @@ for GitHub Action, 用来做提交后代码检查
 
 注意：
 1. 默认 git push 只处理非main master分支，main和master分支处理pull request, 可以再 linter.yml中修改
-2. 组内默认使用less [22.04.20 目前stylelint暂时不支持less 和 prettier，等PR反馈]
+2. 组内默认使用less
 3. 默认会检查 Markdown
 
 更多配置可以看linter.yml
+
+### stylelint 团队配置
+
+```text
+   yarn add -D stylelint stylelint-config-standard stylelint-config-prettier postcss-less
+   
+   # .stylelintrc.json
+   {
+     "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+     "customSyntax": "postcss-less"
+   }
+```
 
 ## 2. Husky + Lint Staged
 
