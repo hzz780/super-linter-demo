@@ -3,6 +3,7 @@
 1. Super Linter
 2. Husky + Lint Staged
 3. commitlint
+4. 关于yarn v2的尝试
 
 ## 1. Super Linter
 
@@ -71,4 +72,14 @@ Node.js 我们团队node版本使用的是 12、14、16，一直在更新
 2. ```echo "module.exports = { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js```
 3. ```yarn husky add .husky/commit-msg 'yarn commitlint --edit $1'```
 
+## 4.Yarn v2
+
+因为之前已经创建过了，这里用的 [Migration](https://next.yarnpkg.com/getting-started/migration#setup-your-ide-for-pnp-support) 
+的方式。
+
+pnp的模式挺好的，Mac的磁盘空间得到肉眼可见的释放。团队协作也不用去管依赖的问题了。算是一个进步。
+
+但是有一些问题，让我目前只能开 `nodeLinker: node-modules`。1.Webstorm的支持 2.Eslint的使用
+
+可能是我漏了文档没有看到...有空再继续看看了
 
